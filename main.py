@@ -1,5 +1,6 @@
 import requests
 
+
 class SSOClient:
     def __init__(self, base_url):
         self.base_url = base_url
@@ -50,6 +51,7 @@ class SSOClient:
             print(response.json()["message"])
         else:
             print(f"Failed to retrieve user data: {response.json().get('error')}")
+
 
 # Example usage
 client = SSOClient("http://localhost:5000")
